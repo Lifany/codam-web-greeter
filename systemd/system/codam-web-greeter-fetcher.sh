@@ -11,7 +11,7 @@ DATA_SERVER_URL="$DATA_SERVER_URL$(/usr/bin/hostname)"
 /usr/bin/echo "Fetching data from $DATA_SERVER_URL..."
 
 # Get the data from the data server
-DATA=$(/usr/bin/curl -s "$DATA_SERVER_URL")
+DATA=$(/usr/bin/curl -k -s "$DATA_SERVER_URL")
 
 # Check if the data is valid JSON
 if ! /usr/bin/jq -e . >/dev/null 2>&1 <<<"$DATA"; then
