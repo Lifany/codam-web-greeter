@@ -1,6 +1,6 @@
 export interface UIInfoElements {
 	hostname: HTMLSpanElement;
-	//version: HTMLSpanElement;
+	version: HTMLSpanElement;
 	clock: HTMLSpanElement;
 	date: HTMLSpanElement;
 	networkIcon: HTMLSpanElement;
@@ -13,7 +13,7 @@ export class InfoBarsUI {
 	public constructor() {
 		this._infoElements = {
 			hostname: document.getElementById('info-hostname') as HTMLSpanElement,
-			//version: document.getElementById('info-version') as HTMLSpanElement,
+			version: document.getElementById('info-version') as HTMLSpanElement,
 			clock: document.getElementById('info-clock') as HTMLSpanElement,
 			date: document.getElementById('info-date') as HTMLSpanElement,
 			networkIcon: document.getElementById('info-network-icon') as HTMLSpanElement,
@@ -36,7 +36,7 @@ export class InfoBarsUI {
 		});
 
 		// Populate version info
-		//this._infoElements.version.innerText = window.data.pkgName + " v" + window.data.pkgVersion;
+		this._infoElements.version.innerText = window.data.pkgName + " v" + window.data.pkgVersion;
 
 		// Populate hostname info
 		this._infoElements.hostname.innerText = window.data.hostname;
