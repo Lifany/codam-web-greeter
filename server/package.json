@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codam-coding-college/codam-web-greeter.git"
+    "url": "git+https://github.com/Lifany/codam-web-greeter.git"
   },
   "author": "Codam Coding College",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/codam-coding-college/codam-web-greeter/issues"
+    "url": "https://github.com/Lifany/codam-web-greeter/issues"
   },
-  "homepage": "https://github.com/codam-coding-college/codam-web-greeter#readme",
+  "homepage": "https://github.com/Lifany/codam-web-greeter#readme",
   "dependencies": {
     "@codam/fast42": "^3.1.1",
     "dotenv": "^16.3.1",
