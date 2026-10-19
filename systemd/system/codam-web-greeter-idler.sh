@@ -43,7 +43,7 @@ while IFS= read -r line; do
 	MAX_IDLE_TIME_MINUTES=$((37))
 	MAX_IDLE_TIME=$((MAX_IDLE_TIME_MINUTES * 60 * 1000))
 	if [ "$IDLE_TIME" -gt "$MAX_IDLE_TIME" ] || [ "$TIME_SINCE_LOCK" -gt "$MAX_IDLE_TIME" ]; then
-		/usr/bin/echo "Session for user $USERNAME has been idle for over 37 minutes (idletime $IDLE_TIME ms, time_since_lock $TIME_SINCE_LOCK ms), forcing logout now"
+		/usr/bin/echo "Session for user $USERNAME has been idle for over $MAX_IDLE_TIME_MINUTES minutes (idletime $IDLE_TIME ms, time_since_lock $TIME_SINCE_LOCK ms), forcing logout now"
 		LOCKED=false
 		/usr/bin/loginctl show-user lightdm &>/dev/null && LOCKED=true
 		/usr/bin/loginctl terminate-user "$USERNAME"

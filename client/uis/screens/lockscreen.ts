@@ -176,7 +176,7 @@ export class LockScreenUI extends UIScreen {
 			return;
 		}
 
-		const logoutAfter = 42; // minutes
+		const logoutAfter = 37; // minutes, keep in sync with MAX_IDLE_TIME_MINUTES in systemd/system/codam-web-greeter-idler.sh
 		const lockedMinutesAgo = (Date.now() - this._lockedTime.getTime()) / 1000 / 60;
 		const timeRemaining = logoutAfter - lockedMinutesAgo;
 		if (timeRemaining <= 0.25) {
